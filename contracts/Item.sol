@@ -17,4 +17,9 @@ contract Item is ERC721Enumerable, ERC721Pausable {
         return ERC721.supportsInterface(interfaceId)
             || ERC721Enumerable.supportsInterface(interfaceId);
     }
+
+    function mintNft() external {
+        uint256 currentSupply_ = totalSupply();
+        _mint(msg.sender, currentSupply_);
+    }
 }
