@@ -1,12 +1,12 @@
 import { ethers } from "hardhat";
 import { expect } from "chai";
-import { Item } from "../typechain-types"
+import { BuggyItem } from "../typechain-types"
 
-context(`Item`, async () => {
-    let item: Item;
+context(`BuggyItem`, async () => {
+    let item: BuggyItem;
     beforeEach(async () => {
-        const ItermContract = await ethers.getContractFactory('Item');
-        item = await ItermContract.deploy('Iterm', 'ITM');
+        const ItermContract = await ethers.getContractFactory('BuggyItem');
+        item = await ItermContract.deploy('BuggyItem', 'BITM');
         await item.deployed();
     })
 

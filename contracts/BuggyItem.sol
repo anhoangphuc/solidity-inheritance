@@ -4,7 +4,7 @@ pragma solidity 0.8.12;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 
-contract Item is ERC721Enumerable, ERC721Pausable {
+contract BuggyItem is ERC721Enumerable, ERC721Pausable {
 
     constructor(string memory name_, string memory symbol_) ERC721(name_, symbol_) {}
 
